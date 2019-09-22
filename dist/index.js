@@ -1,6 +1,6 @@
 const Reflect = window.Reflect;
 
-const {apply: apply, construct: construct, defineProperty: defineProperty, deleteProperty: deleteProperty, get: get, getOwnPropertyDescriptor: getOwnPropertyDescriptor, getPrototypeOf: getPrototypeOf, has: has, isExtensible: isExtensible, ownKeys: ownKeys, preventExtensions: preventExtensions, set: set, setPrototypeOf: setPrototypeOf} = Reflect;
+const {construct: construct, deleteProperty: deleteProperty, get: get, getOwnPropertyDescriptor: getOwnPropertyDescriptor, getPrototypeOf: getPrototypeOf, has: has, ownKeys: ownKeys, set: set} = Reflect;
 
 function isobject(a) {
     return typeof a === "object" && a !== null;
@@ -13,6 +13,8 @@ function isfunction(a) {
 function isclassextendsHTMLElement(initclass) {
     return !!(isfunction(initclass) && initclass.prototype && initclass.prototype instanceof HTMLElement);
 }
+
+const invalid_custom_element_class = "invalid custom element class !";
 
 if (!isobject(window.customElements)) {
     throw new TypeError(" customElements  not supported !");
@@ -36,7 +38,7 @@ var RandomDefine = (initclass, extendsname) => RandomDefineCustomElement(initcla
 
 function RandomDefineCustomElement(initclass, extendsname, length = 1) {
     if (!isclassextendsHTMLElement(initclass)) {
-        throw TypeError("invalid custom element class !");
+        throw TypeError(invalid_custom_element_class);
     }
     if (!customElements[elementset].has(initclass)) {
         const elementname = getrandomstringandnumber(length);
@@ -68,7 +70,7 @@ if (!customElements[elementmap]) {
 customElements.define = function(name, constructor, options) {
     if (!isclassextendsHTMLElement(constructor)) {
         console.error(constructor);
-        throw TypeError("invalid custom element class !");
+        throw TypeError(invalid_custom_element_class);
     }
     if (!customElements[elementset].has(constructor)) {
         if (has(customElements[elementmap], name)) {
