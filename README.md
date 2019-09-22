@@ -38,11 +38,15 @@ function RandomDefine(initclass: Function, extendsname?: string): string;
 
 # 使用方法
 
+##普通组件
+
 ```js
 var mycom = class extends HTMLElement {};
 RandomDefine(mycom);
 var myele = new mycom();
 ```
+
+##继承组件
 
 ```js
 var mycom = class extends HTMLDivElement {};
