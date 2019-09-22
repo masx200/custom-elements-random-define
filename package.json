@@ -23,8 +23,7 @@
         "@typescript-eslint/eslint-plugin": "^2.3.0",
         "@typescript-eslint/parser": "^2.3.0",
         "eslint": "^6.4.0",
-        "mvvm-reactive-view": "https://gitee.com/masx200/mvvm-reactive-view.git",
-        "rollup": "^1.21.2",
+          "rollup": "^1.21.2",
         "rollup-plugin-babel": "^4.3.3",
         "rollup-plugin-commonjs": "^10.1.0",
         "rollup-plugin-json": "^4.0.0",
@@ -35,5 +34,8 @@
         "tslib": "^1.10.0",
         "typescript": "^3.6.3"
     },
-    "dependencies": {}
+    "dependencies": {
+"mvvm-reactive-view": "https://gitee.com/masx200/mvvm-reactive-view.git"
+      
+}
 }
