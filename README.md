@@ -1,2 +1,45 @@
 # custom-elements-random-define
- web-components随机定义custom-elements,并且防止重名定义的js库
+
+`web-components` 随机定义 `custom-elements`,并且防止重名定义的 js 库
+
+如果定义重名,则自动使用随机名称定义
+
+由于修改了 `customElements` 的 API,所以需要在最前面引入此模块
+
+# 安装 npm 模块
+
+```powershell
+cnpm install --save  https://github.com/masx200/custom-elements-random-define.git
+```
+
+或者
+
+```powershell
+yarn add https://github.com/masx200/custom-elements-random-define.git
+```
+
+# 使用 npm 模块
+
+```js
+import RandomDefine from "custom-elements-random-define";
+```
+
+# 在浏览器中使用
+
+```js
+import RandomDefine from "https://cdn.jsdelivr.net/gh/masx200/custom-elements-random-define@master/dist/index.min.js";
+```
+
+# API
+
+```ts
+function RandomDefine(initclass: Function, extendsname?: string): string;
+```
+
+# 使用方法
+
+```js
+var mycom = class extends HTMLElement {};
+RandomDefine(mycom);
+var myele = new mycom();
+```
