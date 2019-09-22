@@ -1,0 +1,39 @@
+{
+    "name": "custom-elements-random-define",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "types": "src/index.ts",
+    "module": "dist/index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/masx200/custom-elements-random-define.git"
+    },
+    "author": "masx200 <34191203+masx200@users.noreply.github.com>",
+    "license": "MIT",
+    "description": "web-components随机定义custom-elements,并且防止重名定义的js库",
+    "bugs": {
+        "url": "https://github.com/masx200/custom-elements-random-define/issues"
+    },
+    "homepage": "https://github.com/masx200/custom-elements-random-define#readme",
+    "scripts": {
+        "build": " rollup -c rollup.config.js"
+    },
+    "keywords": [],
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.3.0",
+        "@typescript-eslint/parser": "^2.3.0",
+        "eslint": "^6.4.0",
+        "mvvm-reactive-view": "https://gitee.com/masx200/mvvm-reactive-view.git",
+        "rollup": "^1.21.2",
+        "rollup-plugin-babel": "^4.3.3",
+        "rollup-plugin-commonjs": "^10.1.0",
+        "rollup-plugin-json": "^4.0.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-terser": "^5.1.2",
+        "rollup-plugin-typescript": "^1.0.1",
+        "terser": "^4.3.1",
+        "tslib": "^1.10.0",
+        "typescript": "^3.6.3"
+    },
+    "dependencies": {}
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "module": "esnext",
+    "target": "esnext",
+    "jsx": "preserve",
+    "removeComments": true,
+    "pretty": true,
+    "strict": true,
+    "outDir": "./src/",
+    "rootDir": "./",
+    "allowJs": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "noFallthroughCasesInSwitch": true,
+
+    /*  "paths": {
+      "*": ["node_modules/*"]
+    }, */
+    "importHelpers": true
+  }
+  //"exclude": ["node_modules", "**/node_modules/*"]
+  //"include": ["src/**/*.ts"]
+}
