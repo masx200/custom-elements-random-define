@@ -26,8 +26,12 @@ import RandomDefine from "custom-elements-random-define";
 
 # 在浏览器中使用
 
+从cdn获取
+
+https://cdn.jsdelivr.net/gh/masx200/custom-elements-random-define@latest/dist/index.min.js
+
 ```js
-import RandomDefine from "https://cdn.jsdelivr.net/gh/masx200/custom-elements-random-define@master/dist/index.min.js";
+import RandomDefine from "https://cdn.jsdelivr.net/gh/masx200/custom-elements-random-define@latest/dist/index.min.js";
 ```
 
 # API
