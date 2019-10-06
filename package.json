@@ -31,9 +31,10 @@
         "rollup-plugin-typescript": "^1.0.1",
         "terser": "^4.3.1",
         "tslib": "^1.10.0",
-        "typescript": "^3.6.3"
+        "typescript": "^3.6.3",
+"mvvm-reactive-view": "https://gitee.com/masx200/mvvm-reactive-view.git"
+  
     },
     "dependencies": {
-        "mvvm-reactive-view": "https://gitee.com/masx200/mvvm-reactive-view.git"
-    }
+          }
 }
