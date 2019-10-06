@@ -37,7 +37,12 @@ import RandomDefine from "https://cdn.jsdelivr.net/gh/masx200/custom-elements-ra
 # API
 
 ```ts
-function RandomDefine(initclass: Function, extendsname?: string): string;
+interface Class {
+  new (): HTMLElement;
+  prototype: HTMLElement;
+  
+}
+function RandomDefine(initclass: Class, extendsname?: string): string;
 ```
 
 # 使用方法
