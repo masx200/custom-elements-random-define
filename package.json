@@ -1,5 +1,8 @@
 {
-    "name": "custom-elements-random-define",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "name": "@masx200/custom-elements-random-define",
     "version": "1.0.1",
     "main": "dist/index.js",
     "types": "src/index.ts",
