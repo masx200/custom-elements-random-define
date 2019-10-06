@@ -21,7 +21,7 @@ yarn add https://github.com/masx200/custom-elements-random-define.git
 # 使用 npm 模块
 
 ```js
-import RandomDefine from "custom-elements-random-define";
+import RandomDefine from "@masx200/custom-elements-random-define";
 ```
 
 # 在浏览器中使用
