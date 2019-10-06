@@ -26,7 +26,7 @@ import RandomDefine from "custom-elements-random-define";
 
 # 在浏览器中使用
 
-从cdn获取
+从 cdn 获取
 
 https://cdn.jsdelivr.net/gh/masx200/custom-elements-random-define@latest/dist/index.min.js
 
@@ -40,7 +40,6 @@ import RandomDefine from "https://cdn.jsdelivr.net/gh/masx200/custom-elements-ra
 interface Class {
   new (): HTMLElement;
   prototype: HTMLElement;
-  
 }
 function RandomDefine(initclass: Class, extendsname?: string): string;
 ```
