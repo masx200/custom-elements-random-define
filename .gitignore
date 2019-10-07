@@ -1,4 +1,7 @@
+.vscode/settings.json
 .vscode
+.npmrc
+.vscode/*
 # Logs
 logs
 *.log

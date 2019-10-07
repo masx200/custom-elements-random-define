@@ -1,6 +1,6 @@
 const Reflect = window.Reflect;
 
-const {construct: construct, deleteProperty: deleteProperty, get: get, getOwnPropertyDescriptor: getOwnPropertyDescriptor, getPrototypeOf: getPrototypeOf, has: has, ownKeys: ownKeys, set: set} = Reflect;
+const {apply: apply, construct: construct, defineProperty: defineProperty, deleteProperty: deleteProperty, get: get, getOwnPropertyDescriptor: getOwnPropertyDescriptor, getPrototypeOf: getPrototypeOf, has: has, ownKeys: ownKeys, set: set} = Reflect;
 
 function isobject(a) {
     return typeof a === "object" && a !== null;
@@ -17,30 +17,44 @@ function isclassextendsHTMLElement(initclass) {
 const invalid_custom_element_class = "invalid custom element class !";
 
 if (!isobject(window.customElements)) {
-    throw new TypeError(" customElements  not supported !");
+    console.error(" customElements  not supported !");
+    throw new TypeError;
 }
 
 function 使用value从表中查询key(表, 组件状态名) {
-    return Object.entries(表).find(v => {
+    const outputentrie = Object.entries(表).find(v => {
         return v[1] === 组件状态名;
-    })[0];
+    });
+    return outputentrie ? outputentrie[0] : undefined;
 }
 
 window.CustomElementRegistry = get(getPrototypeOf(window.customElements), "constructor");
-
-const {customElements: customElements, CustomElementRegistry: CustomElementRegistry} = window;
 
 const elementset = Symbol.for("elementset");
 
 const elementmap = Symbol.for("elementmap");
 
+const {CustomElementRegistry: CustomElementRegistry} = window;
+
+const customElements = window.customElements;
+
+if (!has(customElements, elementset)) {
+    set(customElements, elementset, new Set);
+}
+
+if (!has(customElements, elementmap)) {
+    set(customElements, elementmap, {});
+}
+
 var RandomDefine = (initclass, extendsname) => RandomDefineCustomElement(initclass, extendsname);
 
 function RandomDefineCustomElement(initclass, extendsname, length = 1) {
     if (!isclassextendsHTMLElement(initclass)) {
-        throw TypeError(invalid_custom_element_class);
+        console.error(initclass);
+        console.error(invalid_custom_element_class);
+        throw TypeError();
     }
-    if (!customElements[elementset].has(initclass)) {
+    if (!get(customElements, elementset).has(initclass)) {
         const elementname = getrandomstringandnumber(length);
         if (customElements.get(elementname)) {
             return RandomDefineCustomElement(initclass, extendsname, length + 1);
@@ -55,24 +69,17 @@ function RandomDefineCustomElement(initclass, extendsname, length = 1) {
         }
         return elementname;
     } else {
-        return 使用value从表中查询key(customElements[elementmap], initclass);
+        return 使用value从表中查询key(get(customElements, elementmap), initclass);
     }
-}
-
-if (!customElements[elementset]) {
-    customElements[elementset] = new Set;
-}
-
-if (!customElements[elementmap]) {
-    customElements[elementmap] = {};
 }
 
 customElements.define = function(name, constructor, options) {
     if (!isclassextendsHTMLElement(constructor)) {
         console.error(constructor);
-        throw TypeError(invalid_custom_element_class);
+        console.error(invalid_custom_element_class);
+        throw TypeError();
     }
-    if (!customElements[elementset].has(constructor)) {
+    if (!get(customElements, elementset).has(constructor)) {
         if (has(customElements[elementmap], name)) {
             RandomDefineCustomElement(constructor, options ? options.extends : undefined);
         } else {
@@ -83,21 +90,27 @@ customElements.define = function(name, constructor, options) {
     }
 };
 
-customElements[Symbol.iterator] = () => {
+set(customElements, Symbol.iterator, () => {
     const entries = Object.entries(customElements[elementmap]);
     return entries[Symbol.iterator].call(entries);
-};
+});
+
+const charactorlist = Array(26).fill(undefined).map((v, i) => 97 + i).map(n => String.fromCharCode(n));
+
+const hexnumberlist = Array(16).fill(undefined).map((v, i) => i).map(a => a.toString(16));
+
+const charactorandnumberlist = [ ...new Set([ ...hexnumberlist, ...charactorlist ]) ];
 
 function getrandomcharactor() {
-    return get(Array(26).fill(undefined).map((v, i) => 97 + i).map(n => String.fromCharCode(n)), Math.floor(Math.random() * 26));
+    return get(charactorlist, Math.floor(Math.random() * charactorlist.length));
 }
 
-function getrandomhexnumber() {
-    return get(Array(16).fill(undefined).map((v, i) => i), Math.floor(Math.random() * 16)).toString(16);
+function getrandomhexnumberandcharactor() {
+    return get(charactorandnumberlist, Math.floor(Math.random() * charactorandnumberlist.length));
 }
 
-function getrandomstringandnumber(length = 4) {
-    return Array(length).fill(undefined).map(() => getrandomcharactor()).join("") + "-" + Array(length).fill(undefined).map(() => getrandomhexnumber()).join("");
+function getrandomstringandnumber(length = 1) {
+    return Array(length).fill(undefined).map(() => getrandomcharactor()).join("") + "-" + Array(length).fill(undefined).map(() => getrandomhexnumberandcharactor()).join("");
 }
 
 export default RandomDefine;
