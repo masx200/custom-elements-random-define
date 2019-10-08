@@ -50,7 +50,7 @@ function RandomDefine(initclass: Class, extendsname?: string): string;
 
 ```js
 var mycom = class extends HTMLElement {};
-RandomDefine(mycom);
+const tag =RandomDefine(mycom);
 var myele = new mycom();
 ```
 
@@ -58,6 +58,6 @@ var myele = new mycom();
 
 ```js
 var mycom = class extends HTMLDivElement {};
-RandomDefine(mycom, "div");
+const tag =RandomDefine(mycom, "div");
 var myele = new mycom();
 ```
