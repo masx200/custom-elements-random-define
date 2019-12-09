@@ -37,11 +37,14 @@ import RandomDefine from "https://cdn.jsdelivr.net/gh/masx200/custom-elements-ra
 # API
 
 ```ts
-interface Class {
+interface ClassConstructor {
   new (): HTMLElement;
   prototype: HTMLElement;
 }
-function RandomDefine(initclass: Class, extendsname?: string): string;
+declare function RandomDefine(
+  initclass: ClassConstructor,
+  extendsname?: string
+): string;
 ```
 
 # 使用方法
@@ -50,7 +53,7 @@ function RandomDefine(initclass: Class, extendsname?: string): string;
 
 ```js
 var mycom = class extends HTMLElement {};
-const tag =RandomDefine(mycom);
+const tag = RandomDefine(mycom);
 var myele = new mycom();
 ```
 
@@ -58,6 +61,6 @@ var myele = new mycom();
 
 ```js
 var mycom = class extends HTMLDivElement {};
-const tag =RandomDefine(mycom, "div");
+const tag = RandomDefine(mycom, "div");
 var myele = new mycom();
 ```
