@@ -1,9 +1,10 @@
 {
+    "type": "module",
     "publishConfig": {
-        "registry": "https://npm.pkg.github.com/"
+        "registry": "https://registry.npmjs.org/"
     },
     "name": "@masx200/custom-elements-random-define",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "module": "dist/index.js",
