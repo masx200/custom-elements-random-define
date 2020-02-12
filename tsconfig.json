@@ -1,30 +1,27 @@
 {
-  "compilerOptions": {
-    "moduleResolution": "node",
-    "declarationDir": "dist",
-    "declaration": true,
-    "noUnusedLocals": true,
-    "module": "esnext",
-    "target": "esnext",
-    "jsx": "preserve",
-    "removeComments": true,
-    "pretty": true,
-    "strict": true,
-    "outDir": "./dist/",
-    "rootDir": "./src",
-    // "allowJs": true,
-    "sourceMap": true,
-    "strictNullChecks": true,
-    "baseUrl": ".",
-    "noFallthroughCasesInSwitch": true,
+    "compilerOptions": {
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "declarationDir": "dist",
+        "declaration": true,
+        "noUnusedLocals": true,
+        "module": "esnext",
+        "target": "es2019",
+        "jsx": "preserve",
+        "removeComments": true,
+        "pretty": true,
+        "strict": true,
+        "outDir": "./dist/",
+        "rootDir": "./src",
+        "allowJs": true,
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "baseUrl": ".",
+        "noFallthroughCasesInSwitch": true,
 
-    /*  "paths": {
-      "*": ["node_modules/*"]
-    }, */
-    "importHelpers": true
-  },
-  "include": ["*", "./src/*.ts"],
-  "exclude": []
-  //"exclude": ["node_modules", "**/node_modules/*"]
-  //"include": ["src/**/*.ts"]
+        "checkJs": true,
+        "importHelpers": true
+    },
+    "include": ["*.ts", "./src/*.ts"],
+    "exclude": []
 }

@@ -1,6 +1,6 @@
 const Reflect = window.Reflect;
 
-const {apply: apply, construct: construct, defineProperty: defineProperty, deleteProperty: deleteProperty, get: get, getOwnPropertyDescriptor: getOwnPropertyDescriptor, getPrototypeOf: getPrototypeOf, has: has, ownKeys: ownKeys, set: set} = Reflect;
+const {get: get, getPrototypeOf: getPrototypeOf, has: has, set: set} = Reflect;
 
 function isobject(a) {
     return typeof a === "object" && a !== null;
@@ -22,9 +22,7 @@ if (!isobject(window.customElements)) {
 }
 
 function 使用value从表中查询key(表, 组件状态名) {
-    const outputentrie = Object.entries(表).find(v => {
-        return v[1] === 组件状态名;
-    });
+    const outputentrie = Object.entries(表).find(v => v[1] === 组件状态名);
     return outputentrie ? outputentrie[0] : undefined;
 }
 
@@ -43,7 +41,7 @@ if (!has(customElements, elementset)) {
 }
 
 if (!has(customElements, elementmap)) {
-    set(customElements, elementmap, {});
+    set(customElements, elementmap, Object.create(null));
 }
 
 var RandomDefine = (initclass, extendsname) => RandomDefineCustomElement(initclass, extendsname);

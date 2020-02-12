@@ -1,10 +1,6 @@
-// import RandomDefine from "@masx200/mvvm-reactive-view/src/CustomElementRegistry";
 interface ClassConstructor {
-  new (): HTMLElement;
-  prototype: HTMLElement;
+    new (): HTMLElement;
+    prototype: HTMLElement;
 }
-declare function RandomDefine(
-  initclass: ClassConstructor,
-  extendsname?: string
-): string;
+declare var RandomDefine: (initclass: ClassConstructor, extendsname: string) => string;
 export default RandomDefine;

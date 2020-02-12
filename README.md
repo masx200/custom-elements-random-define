@@ -38,12 +38,12 @@ import RandomDefine from "https://cdn.jsdelivr.net/gh/masx200/custom-elements-ra
 
 ```ts
 interface ClassConstructor {
-  new (): HTMLElement;
-  prototype: HTMLElement;
+    new (): HTMLElement;
+    prototype: HTMLElement;
 }
 declare function RandomDefine(
-  initclass: ClassConstructor,
-  extendsname?: string
+    initclass: ClassConstructor,
+    extendsname?: string
 ): string;
 ```
 
