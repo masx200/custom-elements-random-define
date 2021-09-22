@@ -9,13 +9,13 @@
 # 安装 npm 模块
 
 ```powershell
-cnpm install --save @masx200/custom-elements-random-define
+cnpm install --save "@masx200/custom-elements-random-define"
 ```
 
 或者
 
 ```powershell
-yarn add @masx200/custom-elements-random-define
+yarn add "@masx200/custom-elements-random-define"
 ```
 
 # 使用 npm 模块
