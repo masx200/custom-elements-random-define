@@ -6,7 +6,7 @@
         "declaration": true,
         "noUnusedLocals": true,
         "module": "esnext",
-        "target": "es2019",
+        "target": "esnext",
         "jsx": "preserve",
         "removeComments": true,
         "pretty": true,

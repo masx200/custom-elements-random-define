@@ -39,7 +39,7 @@ import RandomDefine from "https://cdn.jsdelivr.net/gh/masx200/custom-elements-ra
 ```ts
 declare var RandomDefine: (
     initclass: CustomElementConstructor,
-    extendsname: string
+    extendsname?: string | undefined
 ) => string;
 ```
 

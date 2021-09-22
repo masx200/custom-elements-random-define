@@ -1,10 +1,10 @@
-/* eslint-disable @typescript-eslint/class-name-casing */
-/* eslint-disable @typescript-eslint/no-empty-interface */
+// /* eslint-disable @typescript-eslint/class-name-casing */
+// /* eslint-disable @typescript-eslint/no-empty-interface */
 const Reflect = window.Reflect;
 
 const {
     get: get,
-    // getPrototypeOf: getPrototypeOf,
+    //     // getPrototypeOf: getPrototypeOf,
     has: has,
     set: set,
 } = Reflect;
@@ -35,9 +35,9 @@ if (!isobject(window.customElements)) {
 }
 
 function 使用value从表中查询key(
-    表: { [s: string]: CustomElementConstructor },
+    表: { [s: string]: CustomElementConstructor | undefined },
     组件状态名: CustomElementConstructor
-) {
+): string | undefined {
     const outputentrie = Object.entries(表).find((v) => {
         return v[1] === 组件状态名;
     });
@@ -49,28 +49,49 @@ window.CustomElementRegistry = Reflect.get(
     "constructor"
 );
 
-const elementset = Symbol.for("elementset");
+// const elementset = Symbol.for("elementset");
 
 const elementmap = Symbol.for("elementmap");
 
 const { CustomElementRegistry: CustomElementRegistry } = window;
 
+// class CustomElementStoreRegistry
+//     extends CustomElementRegistry
+//     implements customElementsclass
+// {
+//     [elementmap] = Object.create(null) as Record<
+//         string,
+//         CustomElementConstructor | undefined
+//     >;
+//     define(
+//         name: string,
+//         constructor: CustomElementConstructor,
+//         options?: ElementDefinitionOptions
+//     ) {
+//         super.define(name, constructor, options);
+//         this[elementmap][name] = constructor;
+//     }
+// }
+
 const customElements: customElementsclass =
     window.customElements as customElementsclass;
+
 interface customElementsclass extends CustomElementRegistry {
-    [elementmap]: Record<string, CustomElementConstructor>;
-    [elementset]: Set<CustomElementConstructor>;
+    [elementmap]: Record<string, CustomElementConstructor | undefined>;
+    // [elementset]: Set<CustomElementConstructor>;
 }
-if (!has(customElements, elementset)) {
-    set(customElements, elementset, new Set());
-}
+// if (!has(customElements, elementset)) {
+//     set(customElements, elementset, new Set());
+// }
 
 if (!has(customElements, elementmap)) {
     set(customElements, elementmap, Object.create(null));
 }
 
-var RandomDefine = (initclass: CustomElementConstructor, extendsname: string) =>
-    RandomDefineCustomElement(initclass, extendsname);
+const RandomDefine = (
+    initclass: CustomElementConstructor,
+    extendsname?: string
+) => RandomDefineCustomElement(initclass, extendsname);
 
 function RandomDefineCustomElement(
     initclass: CustomElementConstructor,
@@ -82,9 +103,10 @@ function RandomDefineCustomElement(
         console.error(invalid_custom_element_class);
         throw TypeError("invalid custom element class !");
     }
-    if (!get(customElements, elementset).has(initclass)) {
+    if (!Object.values(customElements[elementmap]).includes(initclass)) {
         const elementname = getrandomstringandnumber(length);
         if (customElements.get(elementname)) {
+            //随机定义重名了
             return RandomDefineCustomElement(
                 initclass,
                 extendsname,
@@ -113,41 +135,41 @@ customElements.define = function (
     constructor: CustomElementConstructor,
     options?: ElementDefinitionOptions
 ) {
-    if (!isclassextendsHTMLElement(constructor)) {
-        console.error(constructor);
-        console.error(invalid_custom_element_class);
-        throw TypeError("invalid custom element class !");
-    }
-    if (!get(customElements, elementset).has(constructor)) {
-        if (has(customElements[elementmap], name)) {
-            RandomDefineCustomElement(
-                constructor,
-                options ? options.extends : undefined
-            );
-        } else {
-            CustomElementRegistry.prototype.define.call(
-                customElements,
-                name,
-                constructor,
-                options
-            );
-            customElements[elementset].add(constructor);
-            customElements[elementmap][name] = constructor;
-        }
-    } else {
-        CustomElementRegistry.prototype.define.call(
-            customElements,
-            name,
-            constructor,
-            options
-        );
-    }
+    //     // if (!isclassextendsHTMLElement(constructor)) {
+    //     //     console.error(constructor);
+    //     //     console.error(invalid_custom_element_class);
+    //     //     throw TypeError("invalid custom element class !");
+    //     // }
+    //     // if (!get(customElements, elementset).has(constructor)) {
+    //     //     if (has(customElements[elementmap], name)) {
+    //     //         RandomDefineCustomElement(
+    //     //             constructor,
+    //     //             options ? options.extends : undefined
+    //     //         );
+    //     //     } else {
+    CustomElementRegistry.prototype.define.call(
+        customElements,
+        name,
+        constructor,
+        options
+    );
+    //     // customElements[elementset].add(constructor);
+    customElements[elementmap][name] = constructor;
+    //     //     }
+    //     // } else {
+    //     //     CustomElementRegistry.prototype.define.call(
+    //     //         customElements,
+    //     //         name,
+    //     //         constructor,
+    //     //         options
+    //     //     );
+    //     // }
 };
 
-set(customElements, Symbol.iterator, () => {
-    const entries = Object.entries(customElements[elementmap]);
-    return entries[Symbol.iterator].call(entries);
-});
+// set(customElements, Symbol.iterator, () => {
+//     const entries = Object.entries(customElements[elementmap]);
+//     return entries[Symbol.iterator].call(entries);
+// });
 
 const charactorlist = Array(26)
     .fill(undefined)

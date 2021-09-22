@@ -28,23 +28,17 @@ function 使用value从表中查询key(表, 组件状态名) {
 
 window.CustomElementRegistry = Reflect.get(window.customElements, "constructor");
 
-const elementset = Symbol.for("elementset");
-
 const elementmap = Symbol.for("elementmap");
 
 const {CustomElementRegistry: CustomElementRegistry} = window;
 
 const customElements = window.customElements;
 
-if (!has(customElements, elementset)) {
-    set(customElements, elementset, new Set);
-}
-
 if (!has(customElements, elementmap)) {
     set(customElements, elementmap, Object.create(null));
 }
 
-var RandomDefine = (initclass, extendsname) => RandomDefineCustomElement(initclass, extendsname);
+const RandomDefine = (initclass, extendsname) => RandomDefineCustomElement(initclass, extendsname);
 
 function RandomDefineCustomElement(initclass, extendsname, length = 1) {
     if (!isclassextendsHTMLElement(initclass)) {
@@ -52,7 +46,7 @@ function RandomDefineCustomElement(initclass, extendsname, length = 1) {
         console.error(invalid_custom_element_class);
         throw TypeError("invalid custom element class !");
     }
-    if (!get(customElements, elementset).has(initclass)) {
+    if (!Object.values(customElements[elementmap]).includes(initclass)) {
         const elementname = getrandomstringandnumber(length);
         if (customElements.get(elementname)) {
             return RandomDefineCustomElement(initclass, extendsname, length + 1);
@@ -72,28 +66,9 @@ function RandomDefineCustomElement(initclass, extendsname, length = 1) {
 }
 
 customElements.define = function(name, constructor, options) {
-    if (!isclassextendsHTMLElement(constructor)) {
-        console.error(constructor);
-        console.error(invalid_custom_element_class);
-        throw TypeError("invalid custom element class !");
-    }
-    if (!get(customElements, elementset).has(constructor)) {
-        if (has(customElements[elementmap], name)) {
-            RandomDefineCustomElement(constructor, options ? options.extends : undefined);
-        } else {
-            CustomElementRegistry.prototype.define.call(customElements, name, constructor, options);
-            customElements[elementset].add(constructor);
-            customElements[elementmap][name] = constructor;
-        }
-    } else {
-        CustomElementRegistry.prototype.define.call(customElements, name, constructor, options);
-    }
+    CustomElementRegistry.prototype.define.call(customElements, name, constructor, options);
+    customElements[elementmap][name] = constructor;
 };
-
-set(customElements, Symbol.iterator, (() => {
-    const entries = Object.entries(customElements[elementmap]);
-    return entries[Symbol.iterator].call(entries);
-}));
 
 const charactorlist = Array(26).fill(undefined).map(((v, i) => 97 + i)).map((n => String.fromCharCode(n)));
 
