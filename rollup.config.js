@@ -3,22 +3,23 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import { terser } from "rollup-plugin-terser";
 import json from "@rollup/plugin-json";
-import typescript from "rollup-plugin-typescript2";
+import typescript from "rollup-plugin-ts";
 const myterserplugin = terser({
-    sourcemap: true,
+    // sourcemap: true,
     toplevel: true,
     output: {
         comments: !1,
-        ascii_only: !0
+        ascii_only: !0,
+        beautify: true,
     },
     compress: {
         toplevel: true,
         unused: true,
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ["console.log"]
+        pure_funcs: ["console.log"],
     },
-    mangle: { properties: false }
+    mangle: { properties: false },
 });
 export default [
     {
@@ -27,8 +28,8 @@ export default [
             {
                 file: "./dist/index.js",
                 format: "esm",
-                sourcemap: true
-            }
+                sourcemap: true,
+            },
         ],
         plugins: [
             json(),
@@ -40,10 +41,10 @@ export default [
                 mangle: false,
                 output: {
                     comments: !1,
-                    beautify: true
-                }
-            })
-        ]
+                    beautify: true,
+                },
+            }),
+        ],
     },
     {
         input: "./dist/index.js",
@@ -51,9 +52,9 @@ export default [
             {
                 file: "./dist/index.min.js",
                 format: "esm",
-                sourcemap: true
-            }
+                sourcemap: true,
+            },
         ],
-        plugins: [resolve(), commonjs(), myterserplugin]
-    }
+        plugins: [json(), resolve(), commonjs(), myterserplugin],
+    },
 ];

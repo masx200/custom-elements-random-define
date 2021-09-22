@@ -9,13 +9,13 @@
 # 安装 npm 模块
 
 ```powershell
-cnpm install --save  https://github.com/masx200/custom-elements-random-define.git
+cnpm install --save @masx200/custom-elements-random-define
 ```
 
 或者
 
 ```powershell
-yarn add https://github.com/masx200/custom-elements-random-define.git
+yarn add @masx200/custom-elements-random-define
 ```
 
 # 使用 npm 模块
@@ -37,14 +37,10 @@ import RandomDefine from "https://cdn.jsdelivr.net/gh/masx200/custom-elements-ra
 # API
 
 ```ts
-interface ClassConstructor {
-    new (): HTMLElement;
-    prototype: HTMLElement;
-}
-declare function RandomDefine(
-    initclass: ClassConstructor,
-    extendsname?: string
-): string;
+declare var RandomDefine: (
+    initclass: CustomElementConstructor,
+    extendsname: string
+) => string;
 ```
 
 # 使用方法
@@ -55,6 +51,8 @@ declare function RandomDefine(
 var mycom = class extends HTMLElement {};
 const tag = RandomDefine(mycom);
 var myele = new mycom();
+
+let inst = document.createElement(tag);
 ```
 
 ## 继承组件
@@ -63,4 +61,5 @@ var myele = new mycom();
 var mycom = class extends HTMLDivElement {};
 const tag = RandomDefine(mycom, "div");
 var myele = new mycom();
+let inst = document.createElement("div", { is: tag });
 ```

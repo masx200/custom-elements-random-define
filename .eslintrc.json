@@ -1,48 +1,48 @@
 {
-  //"validate": ["javascript", "typescript"],
-  /* "parserOptions":{
+    //"validate": ["javascript", "typescript"],
+    /* "parserOptions":{
 
 }, */
-  "plugins": ["@typescript-eslint"],
-  "parser": "@typescript-eslint/parser",
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true,
-    "worker": true,
-    "commonjs": true,
-    "amd": true
-  },
-  "extends": [
-    //  "prettier",
-    //  "prettier/@typescript-eslint",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/eslint-recommended"
-  ],
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
-  "parserOptions": {
-    // "project": "./tsconfig.json",
-    "ecmaVersion": 2019,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
+    "plugins": ["@typescript-eslint"],
+    "parser": "@typescript-eslint/parser",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "worker": true,
+        "commonjs": true,
+        "amd": true
+    },
+    "extends": [
+        //  "prettier",
+        //  "prettier/@typescript-eslint",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        // "project": "./tsconfig.json",
+        "ecmaVersion": 2019,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "@typescript-eslint/camelcase": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "no-empty": 0,
+        "@typescript-eslint/no-use-before-define": 0,
+        "no-useless-escape": 0,
+        "no-var": 0,
+        "prefer-const": 0
     }
-  },
-  "rules": {
-    "@typescript-eslint/camelcase": 0,
-    "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/no-explicit-any": 0,
-    "no-empty": 0,
-    "@typescript-eslint/no-use-before-define": 0,
-    "no-useless-escape": 0,
-    "no-var": 0,
-    "prefer-const": 0
-  }
-  //  "autoFixOnSave": true
+    //  "autoFixOnSave": true
 }
 
 /* 

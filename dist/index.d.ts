@@ -1,6 +1,5 @@
-interface ClassConstructor {
-    new (): HTMLElement;
-    prototype: HTMLElement;
-}
-declare var RandomDefine: (initclass: ClassConstructor, extendsname: string) => string;
-export default RandomDefine;
+declare var RandomDefine: (
+    initclass: CustomElementConstructor,
+    extendsname: string
+) => string;
+export { RandomDefine as default };
