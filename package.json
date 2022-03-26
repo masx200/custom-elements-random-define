@@ -33,7 +33,7 @@
         "@typescript-eslint/parser": "^4.23.0",
         "acorn": "8.2.4",
         "lodash": "4.17.21",
-        "minimist": "1.2.5",
+        "minimist": "1.2.6",
         "prettier": "^2.4.1",
         "rollup": "^2.57.0",
         "rollup-plugin-terser": "^7.0.2",
