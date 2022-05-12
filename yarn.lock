@@ -1136,6 +1136,11 @@ acorn@8.2.4:
   resolved "https://registry.nlark.com/acorn/download/acorn-8.2.4.tgz?cache=0&sync_timestamp=1620134156200&other_urls=https%3A%2F%2Fregistry.nlark.com%2Facorn%2Fdownload%2Facorn-8.2.4.tgz#caba24b08185c3b56e3168e97d15ed17f4d31fd0"
   integrity sha1-yroksIGFw7VuMWjpfRXtF/TTH9A=
 
+acorn@^8.5.0:
+  version "8.7.1"
+  resolved "https://registry.npmmirror.com/acorn/-/acorn-8.7.1.tgz#0197122c843d1bf6d0a5e83220a788f278f63c30"
+  integrity sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==
+
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.npmjs.org/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
@@ -1675,6 +1680,11 @@ lodash.debounce@^4.0.8:
   resolved "https://registry.nlark.com/lodash.debounce/download/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
 
+lodash.sortby@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.npmmirror.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
+  integrity sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==
+
 lodash@4.17.21, lodash@^4.17.15:
   version "4.17.21"
   resolved "https://registry.npm.taobao.org/lodash/download/lodash-4.17.21.tgz?cache=0&sync_timestamp=1613835817439&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
@@ -1790,6 +1800,11 @@ prettier@^2.4.1:
   version "2.4.1"
   resolved "https://registry.nlark.com/prettier/download/prettier-2.4.1.tgz?cache=0&sync_timestamp=1631777154625&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fprettier%2Fdownload%2Fprettier-2.4.1.tgz#671e11c89c14a4cfc876ce564106c4a6726c9f5c"
   integrity sha1-Zx4RyJwUpM/Ids5WQQbEpnJsn1w=
+
+punycode@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.npmmirror.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
+  integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
@@ -1966,10 +1981,10 @@ slash@^3.0.0:
   resolved "https://registry.npm.taobao.org/slash/download/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha1-ZTm+hwwWWtvVJAIg2+Nh8bxNRjQ=
 
-source-map-support@~0.5.19:
-  version "0.5.19"
-  resolved "https://registry.nlark.com/source-map-support/download/source-map-support-0.5.19.tgz?cache=0&sync_timestamp=1618847050054&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsource-map-support%2Fdownload%2Fsource-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
-  integrity sha1-qYti+G3K9PZzmWSMCFKRq56P7WE=
+source-map-support@~0.5.20:
+  version "0.5.21"
+  resolved "https://registry.npmmirror.com/source-map-support/-/source-map-support-0.5.21.tgz#04fe7c7f9e1ed2d662233c28cb2b35b9f63f6e4f"
+  integrity sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==
   dependencies:
     buffer-from "^1.0.0"
     source-map "^0.6.0"
@@ -1984,10 +1999,12 @@ source-map@^0.6.0:
   resolved "https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
-source-map@~0.7.2:
-  version "0.7.3"
-  resolved "https://registry.nlark.com/source-map/download/source-map-0.7.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsource-map%2Fdownload%2Fsource-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
-  integrity sha1-UwL4FpAxc1ImVECS5kmB91F1A4M=
+source-map@~0.8.0-beta.0:
+  version "0.8.0-beta.0"
+  resolved "https://registry.npmmirror.com/source-map/-/source-map-0.8.0-beta.0.tgz#d4c1bb42c3f7ee925f005927ba10709e0d1d1f11"
+  integrity sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==
+  dependencies:
+    whatwg-url "^7.0.0"
 
 sourcemap-codec@^1.4.4:
   version "1.4.8"
@@ -2009,13 +2026,14 @@ supports-color@^7.0.0, supports-color@^7.1.0:
     has-flag "^4.0.0"
 
 terser@^5.0.0, terser@^5.7.0:
-  version "5.7.0"
-  resolved "https://registry.nlark.com/terser/download/terser-5.7.0.tgz#a761eeec206bc87b605ab13029876ead938ae693"
-  integrity sha1-p2Hu7CBryHtgWrEwKYdurZOK5pM=
+  version "5.13.1"
+  resolved "https://registry.npmmirror.com/terser/-/terser-5.13.1.tgz#66332cdc5a01b04a224c9fad449fc1a18eaa1799"
+  integrity sha512-hn4WKOfwnwbYfe48NgrQjqNOH9jzLqRcIfbYytOXCOv46LBfWr9bDS17MQqOi+BWGD0sJK3Sj5NC/gJjiojaoA==
   dependencies:
+    acorn "^8.5.0"
     commander "^2.20.0"
-    source-map "~0.7.2"
-    source-map-support "~0.5.19"
+    source-map "~0.8.0-beta.0"
+    source-map-support "~0.5.20"
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
@@ -2028,6 +2046,13 @@ to-regex-range@^5.0.1:
   integrity sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=
   dependencies:
     is-number "^7.0.0"
+
+tr46@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmmirror.com/tr46/-/tr46-1.0.1.tgz#a8b13fd6bfd2489519674ccde55ba3693b706d09"
+  integrity sha512-dTpowEjclQ7Kgx5SdBkqRzVhERQXov8/l9Ft9dVM9fmg0W0KQSVaXX9T4i6twCPNtYiZM53lpSSUAwJbFPOHxA==
+  dependencies:
+    punycode "^2.1.0"
 
 ts-clone-node@^0.3.28:
   version "0.3.28"
@@ -2090,6 +2115,20 @@ unicode-property-aliases-ecmascript@^2.0.0:
   version "2.0.0"
   resolved "https://registry.nlark.com/unicode-property-aliases-ecmascript/download/unicode-property-aliases-ecmascript-2.0.0.tgz?cache=0&sync_timestamp=1631609408629&other_urls=https%3A%2F%2Fregistry.nlark.com%2Funicode-property-aliases-ecmascript%2Fdownload%2Funicode-property-aliases-ecmascript-2.0.0.tgz#0a36cb9a585c4f6abd51ad1deddb285c165297c8"
   integrity sha1-CjbLmlhcT2q9Ua0d7dsoXBZSl8g=
+
+webidl-conversions@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.npmmirror.com/webidl-conversions/-/webidl-conversions-4.0.2.tgz#a855980b1f0b6b359ba1d5d9fb39ae941faa63ad"
+  integrity sha512-YQ+BmxuTgd6UXZW3+ICGfyqRyHXVlD5GtQr5+qjiNW7bF0cqrzX500HVXPBOvgXb5YnzDd+h0zqyv61KUD7+Sg==
+
+whatwg-url@^7.0.0:
+  version "7.1.0"
+  resolved "https://registry.npmmirror.com/whatwg-url/-/whatwg-url-7.1.0.tgz#c2c492f1eca612988efd3d2266be1b9fc6170d06"
+  integrity sha512-WUu7Rg1DroM7oQvGWfOiAK21n74Gg+T4elXEQYkOhtyLeWiJFoOGLXPKI/9gzIie9CtwVLm8wtw6YJdKyxSjeg==
+  dependencies:
+    lodash.sortby "^4.7.0"
+    tr46 "^1.0.1"
+    webidl-conversions "^4.0.2"
 
 wrappy@1:
   version "1.0.2"
