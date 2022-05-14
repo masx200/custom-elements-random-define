@@ -1914,9 +1914,9 @@ rollup-plugin-ts@^1.4.6:
     tslib "^2.3.1"
 
 rollup@^2.57.0:
-  version "2.57.0"
-  resolved "https://registry.nlark.com/rollup/download/rollup-2.57.0.tgz?cache=0&sync_timestamp=1632285983577&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frollup%2Fdownload%2Frollup-2.57.0.tgz#c1694475eb22e1022477c0f4635fd0ac80713173"
-  integrity sha1-wWlEdesi4QIkd8D0Y1/QrIBxMXM=
+  version "2.73.0"
+  resolved "https://registry.npmmirror.com/rollup/-/rollup-2.73.0.tgz#128fef4b333fd92d02d6929afbb6ee38d7feb32d"
+  integrity sha512-h/UngC3S4Zt28mB3g0+2YCMegT5yoftnQplwzPqGZcKvlld5e+kT/QRmJiL+qxGyZKOYpgirWGdLyEO1b0dpLQ==
   optionalDependencies:
     fsevents "~2.3.2"
 
