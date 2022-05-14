@@ -1131,10 +1131,10 @@
   resolved "https://registry.npm.taobao.org/@wessberg/stringutil/download/@wessberg/stringutil-1.0.19.tgz#baadcb6f4471fe2d46462a7d7a8294e4b45b29ad"
   integrity sha1-uq3Lb0Rx/i1GRip9eoKU5LRbKa0=
 
-acorn@8.2.4:
-  version "8.2.4"
-  resolved "https://registry.nlark.com/acorn/download/acorn-8.2.4.tgz?cache=0&sync_timestamp=1620134156200&other_urls=https%3A%2F%2Fregistry.nlark.com%2Facorn%2Fdownload%2Facorn-8.2.4.tgz#caba24b08185c3b56e3168e97d15ed17f4d31fd0"
-  integrity sha1-yroksIGFw7VuMWjpfRXtF/TTH9A=
+acorn@8.7.1:
+  version "8.7.1"
+  resolved "https://registry.npmmirror.com/acorn/-/acorn-8.7.1.tgz#0197122c843d1bf6d0a5e83220a788f278f63c30"
+  integrity sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==
 
 acorn@^8.5.0:
   version "8.7.1"
