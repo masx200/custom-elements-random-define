@@ -1131,10 +1131,10 @@
   resolved "https://registry.npm.taobao.org/@wessberg/stringutil/download/@wessberg/stringutil-1.0.19.tgz#baadcb6f4471fe2d46462a7d7a8294e4b45b29ad"
   integrity sha1-uq3Lb0Rx/i1GRip9eoKU5LRbKa0=
 
-acorn@8.2.4:
-  version "8.2.4"
-  resolved "https://registry.nlark.com/acorn/download/acorn-8.2.4.tgz?cache=0&sync_timestamp=1620134156200&other_urls=https%3A%2F%2Fregistry.nlark.com%2Facorn%2Fdownload%2Facorn-8.2.4.tgz#caba24b08185c3b56e3168e97d15ed17f4d31fd0"
-  integrity sha1-yroksIGFw7VuMWjpfRXtF/TTH9A=
+acorn@8.7.1:
+  version "8.7.1"
+  resolved "https://registry.npmmirror.com/acorn/-/acorn-8.7.1.tgz#0197122c843d1bf6d0a5e83220a788f278f63c30"
+  integrity sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -1914,9 +1914,9 @@ rollup-plugin-ts@^1.4.6:
     tslib "^2.3.1"
 
 rollup@^2.57.0:
-  version "2.57.0"
-  resolved "https://registry.nlark.com/rollup/download/rollup-2.57.0.tgz?cache=0&sync_timestamp=1632285983577&other_urls=https%3A%2F%2Fregistry.nlark.com%2Frollup%2Fdownload%2Frollup-2.57.0.tgz#c1694475eb22e1022477c0f4635fd0ac80713173"
-  integrity sha1-wWlEdesi4QIkd8D0Y1/QrIBxMXM=
+  version "2.73.0"
+  resolved "https://registry.npmmirror.com/rollup/-/rollup-2.73.0.tgz#128fef4b333fd92d02d6929afbb6ee38d7feb32d"
+  integrity sha512-h/UngC3S4Zt28mB3g0+2YCMegT5yoftnQplwzPqGZcKvlld5e+kT/QRmJiL+qxGyZKOYpgirWGdLyEO1b0dpLQ==
   optionalDependencies:
     fsevents "~2.3.2"
 
