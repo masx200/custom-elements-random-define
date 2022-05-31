@@ -82,7 +82,7 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@rollup/pluginutils@^4.2.0":
+"@rollup/pluginutils@^4.2.1":
   version "4.2.1"
   resolved "https://registry.npmmirror.com/@rollup/pluginutils/-/pluginutils-4.2.1.tgz#e6c6c3aba0744edce3fb2074922d3776c0af2a6d"
   integrity sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==
@@ -105,10 +105,10 @@
   resolved "https://registry.npmjs.org/@types/node/-/node-13.7.1.tgz#238eb34a66431b71d2aaddeaa7db166f25971a0d"
   integrity sha512-Zq8gcQGmn4txQEJeiXo/KiLpon8TzAl0kmKH4zdWctPj05nWwp1ClMdAVEloqrQKfaC48PNLdgN/aVaLqUrluA==
 
-"@types/node@^16.11.7":
-  version "16.11.35"
-  resolved "https://registry.npmmirror.com/@types/node/-/node-16.11.35.tgz#6642bdce5b5cee23314b91a7c069981c6bd68791"
-  integrity sha512-QXu45LyepgnhUfnIAj/FyT4uM87ug5KpIrgXfQtUPNAlx8w5hmd8z8emqCLNvG11QkpRSCG9Qg2buMxvqfjfsQ==
+"@types/node@^17.0.36":
+  version "17.0.36"
+  resolved "https://registry.npmmirror.com/@types/node/-/node-17.0.36.tgz#c0d5f2fe76b47b63e0e0efc3d2049a9970d68794"
+  integrity sha512-V3orv+ggDsWVHP99K3JlwtH20R7J4IhI1Kksgc+64q5VxgfRkQG8Ws3MFm/FZOKDYGy9feGFlZ70/HpCNe9QaA==
 
 "@types/object-path@^0.11.1":
   version "0.11.1"
@@ -219,13 +219,6 @@ ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-ansi-styles@^4.1.0:
-  version "4.3.0"
-  resolved "https://registry.nlark.com/ansi-styles/download/ansi-styles-4.3.0.tgz?cache=0&sync_timestamp=1618995625950&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fansi-styles%2Fdownload%2Fansi-styles-4.3.0.tgz#edd803628ae71c04c85ae7a0906edad34b648937"
-  integrity sha1-7dgDYornHATIWuegkG7a00tkiTc=
-  dependencies:
-    color-convert "^2.0.1"
-
 array-union@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npm.taobao.org/array-union/download/array-union-2.1.0.tgz#b798420adbeb1de828d84acd8a2e23d3efe85e8d"
@@ -265,7 +258,7 @@ browserslist@4.20.2:
     node-releases "^2.0.2"
     picocolors "^1.0.0"
 
-browserslist@^4.20.2:
+browserslist@^4.20.3:
   version "4.20.3"
   resolved "https://registry.npmmirror.com/browserslist/-/browserslist-4.20.3.tgz#eb7572f49ec430e054f56d52ff0ebe9be915f8bf"
   integrity sha512-NBhymBQl1zM0Y5dQT/O+xiLP9/rzOIQdKM/eMJBAq7yBgaB6krIYLGejrwVYnSHZdqjscB1SPuAjHwxjvN6Wdg==
@@ -291,13 +284,10 @@ caniuse-lite@^1.0.30001317, caniuse-lite@^1.0.30001328, caniuse-lite@^1.0.300013
   resolved "https://registry.npmmirror.com/caniuse-lite/-/caniuse-lite-1.0.30001340.tgz#029a2f8bfc025d4820fafbfaa6259fd7778340c7"
   integrity sha512-jUNz+a9blQTQVu4uFcn17uAD8IDizPzQkIKh3LCJfg9BkyIqExYYdyc/ZSlWUSKb8iYiXxKsxbv4zYSvkqjrxw==
 
-chalk@4.1.2:
-  version "4.1.2"
-  resolved "https://registry.npmmirror.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
-  integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
-  dependencies:
-    ansi-styles "^4.1.0"
-    supports-color "^7.1.0"
+chalk@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmmirror.com/chalk/-/chalk-5.0.1.tgz#ca57d71e82bb534a296df63bbacc4a1c22b2a4b6"
+  integrity sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==
 
 chalk@^2.0.0:
   version "2.4.2"
@@ -315,41 +305,29 @@ color-convert@^1.9.0:
   dependencies:
     color-name "1.1.3"
 
-color-convert@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.npm.taobao.org/color-convert/download/color-convert-2.0.1.tgz#72d3a68d598c9bdb3af2ad1e84f21d896abd4de3"
-  integrity sha1-ctOmjVmMm9s68q0ehPIdiWq9TeM=
-  dependencies:
-    color-name "~1.1.4"
-
 color-name@1.1.3:
   version "1.1.3"
   resolved "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
-
-color-name@~1.1.4:
-  version "1.1.4"
-  resolved "https://registry.nlark.com/color-name/download/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
-  integrity sha1-wqCah6y95pVD3m9j+jmVyCbFNqI=
 
 commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
-compatfactory@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.npmmirror.com/compatfactory/-/compatfactory-0.0.13.tgz#3862c967623c8976eb1a11208f5cf84520c03346"
-  integrity sha512-k9Sl/Qal3xQPnjAFZaRpl7jlCh0hDEhVaxyiTMfiHKC/w5TYn4Nds+7340X/v1OrAQC5xGBtaD2JpWgPhXWaAw==
+compatfactory@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmmirror.com/compatfactory/-/compatfactory-1.0.1.tgz#a5940f1d734b86c02bb818a67a412d4c306ccaf4"
+  integrity sha512-hR9u0HSZTKDNNchPtMHg6myeNx0XO+av7UZIJPsi4rPALJBHi/W5Mbwi19hC/xm6y3JkYpxVYjTqnSGsU5X/iw==
   dependencies:
     helpertypes "^0.0.18"
 
-crosspath@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmmirror.com/crosspath/-/crosspath-1.0.0.tgz#0892ebb51676eb57df56db8c7c46d3344555051b"
-  integrity sha512-mpjkSErNO6vioL/Cde2aF4UBysPFEMyn+1AN1t7Oc4yqvzSRWe8iBte4P8BHyjo64OmC+ZBxwjIqmpSpIWiQ7Q==
+crosspath@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmmirror.com/crosspath/-/crosspath-2.0.0.tgz#5714f30c6541cc776103754954602ce0d25f126c"
+  integrity sha512-ju88BYCQ2uvjO2bR+SsgLSTwTSctU+6Vp2ePbKPgSCZyy4MWZxYsT738DlKVRE5utUjobjPRm1MkTYKJxCmpTA==
   dependencies:
-    "@types/node" "^16.11.7"
+    "@types/node" "^17.0.36"
 
 debug@^4.1.1:
   version "4.1.1"
@@ -591,7 +569,7 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-magic-string@^0.26.1:
+magic-string@^0.26.2:
   version "0.26.2"
   resolved "https://registry.npmmirror.com/magic-string/-/magic-string-0.26.2.tgz#5331700e4158cd6befda738bb6b0c7b93c0d4432"
   integrity sha512-NzzlXpclt5zAbmo6h6jNc8zl2gNRGHvmsZW4IvZhTC4W7k4OlLP+S5YLussa/r3ixNT66KOQfNORlXHSOy/X4A==
@@ -706,21 +684,21 @@ rollup-plugin-terser@^7.0.2:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup-plugin-ts@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.npmmirror.com/rollup-plugin-ts/-/rollup-plugin-ts-2.0.7.tgz#6994a656b096660f58eb24669f4e30b773f7a680"
-  integrity sha512-M9sppRKX6y/b2KXbGdUdHid0tshAEK/sEeYLBHBJiBa4swukSsoFVXKGGZasLcjaXhgUnnizFuvFFj6znxwvSA==
+rollup-plugin-ts@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmmirror.com/rollup-plugin-ts/-/rollup-plugin-ts-3.0.0.tgz#b7cfa24b27b43d77d0b14a4bc68d2b40ed0b5c04"
+  integrity sha512-QeTtfTtywTUaunAdddjS73jSmTFVipIf0pvlUWN+u2o3dZDA7fvoDxuZ99SaCOg5t1AfOkQadjungy6Hxtljbg==
   dependencies:
-    "@rollup/pluginutils" "^4.2.0"
+    "@rollup/pluginutils" "^4.2.1"
     "@wessberg/stringutil" "^1.0.19"
-    browserslist "^4.20.2"
+    browserslist "^4.20.3"
     browserslist-generator "^1.0.66"
-    chalk "4.1.2"
-    compatfactory "^0.0.13"
-    crosspath "1.0.0"
-    magic-string "^0.26.1"
-    ts-clone-node "^0.3.32"
-    tslib "^2.3.1"
+    chalk "5.0.1"
+    compatfactory "^1.0.1"
+    crosspath "2.0.0"
+    magic-string "^0.26.2"
+    ts-clone-node "^1.0.0"
+    tslib "^2.4.0"
 
 rollup@^2.57.0:
   version "2.73.0"
@@ -806,7 +784,7 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-supports-color@^7.0.0, supports-color@^7.1.0:
+supports-color@^7.0.0:
   version "7.2.0"
   resolved "https://registry.npm.taobao.org/supports-color/download/supports-color-7.2.0.tgz?cache=0&sync_timestamp=1618560998281&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fsupports-color%2Fdownload%2Fsupports-color-7.2.0.tgz#1b7dcdcb32b8138801b3e478ba6a51caa89648da"
   integrity sha1-G33NyzK4E4gBs+R4umpRyqiWSNo=
@@ -837,19 +815,19 @@ tr46@^1.0.1:
   dependencies:
     punycode "^2.1.0"
 
-ts-clone-node@^0.3.32:
-  version "0.3.32"
-  resolved "https://registry.npmmirror.com/ts-clone-node/-/ts-clone-node-0.3.32.tgz#daf7f941282a6c8f89b2053bf7326d67d01401f4"
-  integrity sha512-YYGvoWy2Ba98/YC/0leD7IRsU/q5pu/KRg9dD8omzkbgoZ8g7gfYfED9mWMTyNp7J3CQiiKyvM62B7mXXHKU7Q==
+ts-clone-node@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/ts-clone-node/-/ts-clone-node-1.0.0.tgz#aaffa5478cf303471cec9c3c8169e117a0f87614"
+  integrity sha512-/cDYbr2HAXxFNeTT41c/xs/2bhLJjqnYheHsmA3AoHSt+n4JA4t0FL9Lk5O8kWnJ6jeB3kPcUoXIFtwERNzv6Q==
   dependencies:
-    compatfactory "^0.0.13"
+    compatfactory "^1.0.1"
 
 tslib@^1.8.1:
   version "1.10.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
 
-tslib@^2.2.0, tslib@^2.3.1:
+tslib@^2.2.0, tslib@^2.4.0:
   version "2.4.0"
   resolved "https://registry.npmmirror.com/tslib/-/tslib-2.4.0.tgz#7cecaa7f073ce680a05847aa77be941098f36dc3"
   integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
