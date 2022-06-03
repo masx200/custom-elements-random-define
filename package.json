@@ -39,7 +39,7 @@
         "prettier": "^2.4.1",
         "rollup": "^2.57.0",
         "rollup-plugin-terser": "^7.0.2",
-        "rollup-plugin-ts": "^2.0.7",
+        "rollup-plugin-ts": "^3.0.1",
         "serialize-javascript": "^6.0.0",
         "terser": "^5.7.0",
         "tslib": "^2.2.0",
