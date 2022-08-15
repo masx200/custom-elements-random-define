@@ -90,3 +90,5 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+pnpm-lock.yaml
+yarn.lock
